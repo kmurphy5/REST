@@ -6,13 +6,13 @@ coral = [
     {
         'id': 1,
         'title': u'coral1',
-        'description': u'The first coral', 
+        'description': u'The first coral',
         'done': False
     },
     {
         'id': 2,
         'title': u'coral2',
-        'description': u'the secon coral', 
+        'description': u'the secon coral',
         'done': False
     }
 ]
