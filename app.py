@@ -17,7 +17,7 @@ coral = [
     }
 ]
 
-@app.route('/todo/api/v1.0/tasks', methods=['GET'])
+@app.route('/tasks', methods=['GET'])
 def get_tasks():
     return jsonify({'coral': coral})
 
