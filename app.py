@@ -1,25 +1,25 @@
+from flask import Flask, jsonify
 
-from flask import Flask, url_for,json
 app = Flask(__name__)
 
-@app.route('/')
-def api_root():
-    return 'Welcome'
+coral = [
+    {
+        'id': 1,
+        'title': u'coral1',
+        'description': u'The first coral', 
+        'done': False
+    },
+    {
+        'id': 2,
+        'title': u'coral2',
+        'description': u'the secon coral', 
+        'done': False
+    }
+]
 
-@app.route('/articles')
-def api_articles():
-    return 'List of ' + url_for('api_articles')
+@app.route('/todo/api/v1.0/tasks', methods=['GET'])
+def get_tasks():
+    return jsonify({'coral': coral})
 
-@app.route('/articles/<articleid>')
-def api_article(articleid):
-    return 'You are reading ' + articleid
-
-
-
-@app.route('/echo', methods = ['GET', 'POST', 'PATCH', 'PUT', 'DELETE'])
-def api_echo():
-    if request.method == 'GET':
-        return "ECHO: GET\n"
-
-    elif request.method == 'POST':
-		"app.py" 71L, 1499C                                          1,1           Top
+if __name__ == '__main__':
+    app.run(debug=True)
