@@ -1,3 +1,7 @@
+# adapted with help from https://github.com/lrei
+#supposed to be able to work with curl
+
+
 from flask import Flask, jsonify, abort, request, make_response, url_for
 
 app = Flask(__name__)
