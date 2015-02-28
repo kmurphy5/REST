@@ -23,6 +23,8 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+
+
 class Server {
     /* The array key works as id and is used in the URL
        to identify the resource.
@@ -33,8 +35,8 @@ class Server {
 
     public function serve() {
       
-        $uri = $_SERVER['REQUEST_URI'];
-        $method = $_SERVER['REQUEST_METHOD'];
+      //  $uri = $_SERVER['REQUEST_URI'];
+       // $method = $_SERVER['REQUEST_METHOD'];
         $paths = explode('/', $this->paths($uri));
         array_shift($paths); // Hack; get rid of initials empty string
         $resource = array_shift($paths);
