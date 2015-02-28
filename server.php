@@ -35,8 +35,8 @@ class Server {
 
     public function serve() {
       
-        $uri = $_SERVER['REQUEST_URI'];
-        $method = $_SERVER['REQUEST_METHOD'];
+        $uri = @$_SERVER['REQUEST_URI'];
+        $method = @$_SERVER['REQUEST_METHOD'];
         $paths = explode('/', $this->paths($uri));
         array_shift($paths); // Hack; get rid of initials empty string
         $resource = array_shift($paths);
